@@ -1,0 +1,418 @@
+﻿@using EDuBee.Classes
+@model RegisterAccount
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Đăng Ký Tài Khoản</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/fontawesome-all.css" rel="stylesheet">
+    <link href="/css/swiper.css" rel="stylesheet">
+    <link href="/css/magnific-popup.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+
+    <!-- css for icon font Awesome    -->
+    <style type="text/css">
+        .input-register {
+            position: relative;
+        }
+
+            .input-register i {
+                position: absolute;
+                left: 25px;
+                top: 12px;
+                color: #5f4dee;
+            }
+
+            .input-register input,
+            .input-register input:focus {
+                padding: 8px 8px 8px 40px;
+                border: 1px solid rgba(68, 68, 68, 0.6);
+                outline: none;
+            }
+
+        .combo-register select, .input-class input {
+            border: 1px solid rgba(68, 68, 68, 0.6);
+        }
+
+        .logo-image {
+            text-decoration: none;
+        }
+    </style>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/logo_poki.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+
+            <!-- <img src="images/logo_poki.png" alt="alternative"> -->
+            <!-- Image Logo -->
+            <a class="navbar-brand logo-image" href="index.html">Phần Mềm EDUBEE</a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times"></span>
+            </button>
+            <!-- end of mobile menu toggle button -->
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="index.html#header">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <span class="nav-item">
+                    <a class="btn-outline-sm" href="log-in.html">Đăng Nhập</a>
+                </span>
+            </div>
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+    <!-- Header -->
+    <header id="header" class="ex-2-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" style="margin-bottom: 50px;">
+                    <h1>Trang Đăng Ký Tài Khoản</h1>
+                    <br>
+                    <!-- Sign Up Form -->
+                    <!--<div class="form-container">
+        <form id="signUpForm" data-toggle="validator" data-focus="false">
+            <div class="row">
+                <div class="col-sm-6 form-group login-center input-register">
+                    <input type="text" name="username_register" placeholder="Tên đăng nhập" class="form-control">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="col-sm-6 form-group combo-register">-->
+                    @*@using (Html.BeginForm("Register", "User", FormMethod.Get))
+                    {
+                    <p>
+                        @Html.DropDownList("provinceID", null, "Tỉnh/Thành", new { @class = "form-control" })
+                    </p>
+                    }*@
+                    @*<select class="form-control">
+            <option class="hidden" name="province" selected disabled>Tỉnh/Thành</option>
+            <option value="1">Quảng Nam</option>
+            <option value="1">Đà Nẵng</option>
+        </select>*@
+                    <!--</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 form-group input-register">
+                    <input type="password" name="password_register" placeholder="Mật khẩu" class="form-control">
+                    <i class="fas fa-key"></i>
+                </div>
+                <div class="col-sm-6 form-group combo-register">
+                    <select class="form-control">
+                        <option class="hidden" name="district" selected disabled>Quận/Huyện</option>
+                        <option value="1">Điện Bàn</option>
+                        <option value="1">Thanh Khê</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 form-group input-register">
+                    <input type="text" name="fullName" placeholder="Họ và tên" class="form-control">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="col-sm-6 form-group combo-register">
+                    <select class="form-control">
+                        <option class="hidden" name="wards" selected disabled>Phường/Xã</option>
+                        <option value="1">Điện An</option>
+                        <option value="1">Tam Thuận</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 form-group input-register">
+                    <input type="text" name="phoneNumber" placeholder="Số điện thoại" class="form-control">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="col-sm-6 form-group combo-register">
+                    <select class="form-control">
+                        <option class="hidden" name="school" selected disabled>Trường</option>
+                        <option value="1">Trường tiểu học 1</option>
+                        <option value="1">Trường tiểu học 2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 form-group input-register">
+                    <input type="text" name="email" placeholder="Email" class="form-control">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="col-sm-6 form-group input-class">
+                    <input type="text" name="class" placeholder="Lớp" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group space-bw">
+                <div class="form-group">
+                    <button type="submit" class="form-control-submit-button">Đăng ký</button>
+                </div>
+            </div>
+            <div class="form-message">
+                <div id="smsgSubmit" class="h3 text-center hidden"></div>
+            </div>
+        </form>
+        <p style="color: blue;">Bạn đã có tài khoản? &ensp;<a class="blue" href="log-in.html">Đăng nhập ngay</a></p>
+    </div>-->
+                    <!-- end of form container -->
+                    <!-- end of sign up form -->
+                    <div class="form-container">
+                        <form id="signUpForm"  asp-action="Register" asp-controller="User" method="post">
+                            <div class="row">
+                                <div class="col-sm-6 form-group login-center input-register">
+                                    <input type="text" id="username_register" placeholder="Tên đăng nhập" asp-for="UserName"
+                                           class="form-control">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="col-sm-6 form-group combo-register">
+                                    <select class="form-control" id="tinhthanh" name="calc_shipping_provinces"
+                                            onchange="fetch_select(this.value);" >
+                                        <!-- <option class="hidden" name="province" selected disabled
+                            onchange="fetch_select(this.value);">Tỉnh/Thành</option> -->
+                                        <!-- <option value="1">Quảng Nam</option>
+                        <option value="1">Đà Nẵng</option> -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 form-group input-register">
+                                    <input type="text" id="password_register" placeholder="Mật khẩu" asp-for="Password"
+                                           class="form-control">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                                <div class="col-sm-6 form-group combo-register">
+                                    <select id="new_select" class="form-control" name="calc_shipping_district"
+                                            onchange="fetch_select_ward(this.value)">
+                                        <option class="hidden" name="district" selected disabled>Quận/Huyện</option>
+                                        <!-- <option value="1">Điện Bàn</option>
+                        <option value="1">Thanh Khê</option> -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 form-group input-register">
+                                    <input type="text" id="fullName" placeholder="Họ và tên" class="form-control" asp-for="FullName"> 
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="col-sm-6 form-group combo-register">
+                                    <select class="form-control" id="new_select_ward">
+                                        <option class="hidden" name="wards" selected disabled>Phường/Xã</option>
+                                        <option value="1">Điện An</option>
+                                        <option value="1">Tam Thuận</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 form-group input-register">
+                                    <input type="text" id="phoneNumber" placeholder="Số điện thoại" asp-for="Phonenumber"
+                                           class="form-control">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="col-sm-6 form-group combo-register">
+                                    <select class="form-control">
+                                        <option class="hidden" name="school" selected disabled>Trường</option>
+                                        <option value="1">Trường tiểu học 1</option>
+                                        <option value="1">Trường tiểu học 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 form-group input-register">
+                                    <input type="text" id="email" placeholder="Email" class="form-control" asp-for="Email">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="col-sm-6 form-group input-class">
+                                    <input type="text" name="class" placeholder="Lớp" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group space-bw">
+                                <div class="form-group">
+                                    <button type="submit" class="form-control-submit-button" id="btn-register">
+                                        Đăng
+                                        ký
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-message">
+                                <div id="smsgSubmit" class="h3 text-center hidden"></div>
+                            </div>
+                        </form>
+                        <p style="color: blue;">
+                            Bạn đã có tài khoản? &ensp;<a class="blue" href="log-in.html">
+                                Đăng nhập
+                                ngay
+                            </a>
+                        </p>
+                    </div>
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="/js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="/js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        LoadData();
+    });
+    function LoadData() {
+        $.ajax({
+            url: 'https://localhost:5002/api/Address/GetProvince',
+            type: 'GET',
+            success: function (rs) {
+                var str = '<option  > Tỉnh / Thành</option >';
+                $.each(rs, function (i, item) {
+                    str += "<option value='" + rs[i]["idprovince"] + "'>";
+                    str += rs[i]["name"];
+                    str += "</option>";
+                });
+                $('#tinhthanh').html(str);
+            }
+        });
+    };
+    function fetch_select(val) {
+        console.log(val)
+        $('#new_select').html('');
+
+        $.ajax({
+            type: 'get',
+            url: 'https://localhost:5002/api/Address/GetDistrictByIdProvince?IdProvince=' + val,
+            // data: {
+            //     idDM: val
+            // },
+            success: function (response) {
+                console.log(response)
+                //$('#new_select').html(response);
+                var str = '<option  > Quận / Huyện</option >';
+                $.each(response, function (i, item) {
+                    str += "<option value='" + response[i]["iddistrict"] + "'>";
+                    str += response[i]["name"];
+                    str += "</option>";
+                });
+                document.getElementById("new_select").innerHTML = str;
+            }
+        });
+    }
+    function fetch_select_ward(val) {
+        console.log(val)
+        $('#new_select_ward').html('');
+
+        $.ajax({
+            type: 'get',
+            url: 'https://localhost:5002/api/Address/GetWard?IdDistrict=' + val,
+            // data: {
+            //     idDM: val
+            // },
+            success: function (response) {
+                console.log(response)
+                //$('#new_select').html(response);
+                var str = '<option  > Phường/Xã</option >';
+                $.each(response, function (i, item) {
+                    str += "<option value='" + response[i]["idward"] + "'>";
+                    str += response[i]["name"];
+                    str += "</option>";
+                });
+                document.getElementById("new_select_ward").innerHTML = str;
+            }
+        });
+    };
+    $('#btn-register').click(function (ev) {
+        ev.preventDefault();
+        var username = $('#username_register').val();
+        var password = $('#password_register').val();
+        var fullName = $('#fullName').val();
+        var phoneNumber = $('#phoneNumber').val();
+        var email = $('#email').val();
+
+        var urlLogin = 'https://localhost:5002/api/Account/Register';
+        console.log(username, password, fullName, phoneNumber, email, urlLogin);
+
+        $.ajax({
+            url: urlLogin,
+            type: 'POST',
+            data: {
+                UserName: username,
+                PassWord: password,
+                FullName: fullName,
+                PhoneNumber: phoneNumber,
+                Email: email
+
+            },
+            success: function (res) {
+                // if (res == 1) {
+                //     location = "http://localhost:5500/index.html";
+                // }
+                // if (res == -1) {
+                //     //error = 'Mật khẩu không đúng';
+                // }
+                // let error = '';
+                // if (res == -2) {
+                //     error = 'Tài khoản không tồn tài';
+                // }
+                // if (res == -1) {
+                //     error = 'Mật khẩu không đúng';
+                // }
+
+                // let _html_error =
+                //     '<div class="alert alert-danger">' +
+                //     '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+                //     + error
+                //     + '</div>';
+                // $('#error').html(_html_error);
+
+                console.log(res)
+            }
+        });
+    });
+
+</script>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDuBee", "EDuBee\EDuBee.csproj", "{24410F26-5807-43FD-9E32-FEC8050946C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDuBee.Client", "EDuBee.Client\EDuBee.Client.csproj", "{CE9ED1E6-CA56-4103-8356-CD836049FAC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24410F26-5807-43FD-9E32-FEC8050946C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24410F26-5807-43FD-9E32-FEC8050946C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24410F26-5807-43FD-9E32-FEC8050946C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24410F26-5807-43FD-9E32-FEC8050946C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE9ED1E6-CA56-4103-8356-CD836049FAC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE9ED1E6-CA56-4103-8356-CD836049FAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE9ED1E6-CA56-4103-8356-CD836049FAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE9ED1E6-CA56-4103-8356-CD836049FAC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {187338FF-2D72-4DE6-BC98-44422804DDC8}
+	EndGlobalSection
+EndGlobal
